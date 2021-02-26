@@ -193,8 +193,8 @@ healthcheck(callback) {
      * Note how the object was instantiated in the constructor().
      * get() takes a callback function.
      */
-     const connector = new ServiceNowConnector(options);
-     connector.get( (data, error) => {
+     
+     this.connector.get( (data, error) => {
      if (error) {
         console.error(`\nError returned from GET request:\n${JSON.stringify(error)}`);
         }
@@ -218,8 +218,8 @@ healthcheck(callback) {
      * Note how the object was instantiated in the constructor().
      * post() takes a callback function.
      */
-     const connector = new ServiceNowConnector(options);
-     connector.post({ serviceNowTable: 'change_request' }, (data, error) => {
+     
+     this.connector.post({ serviceNowTable: 'change_request' }, (data, error) => {
      if (error) {
        console.error(`\nError returned from POST request:\n${JSON.stringify(error)}`);
      }
